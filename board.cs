@@ -128,8 +128,7 @@ namespace Tictactoe
             Console.Clear();
             printBoard();
             checkBoardFill();
-
-            
+   
         }
         public void replay(string message)
         {

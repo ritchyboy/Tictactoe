@@ -34,12 +34,14 @@ namespace Tictactoe
                     Console.WriteLine(e.Message);
 
                 }
-                tab.updateBoard();
                 if(tab.checkWinner())
                 {
+                    Console.Clear();
+                    tab.printBoard();
                     Console.WriteLine("Player 1 has won");
                     tab.replay("Do you want to replay.Enter Y to replay or N to exit");
                 }
+                tab.updateBoard();
                 Console.WriteLine("player 2: Choose the index");
                 try
                 {
@@ -52,12 +54,14 @@ namespace Tictactoe
                     Console.WriteLine(e.Message);
 
                 }
-                tab.updateBoard();
                 if(tab.checkWinner())
                 {
+                    Console.Clear();
+                    tab.printBoard();
                     Console.WriteLine("Player 2 has won");
                     tab.replay("Do you want to replay.Enter Y to replay or N to exit");
                 }
+                tab.updateBoard();
             }
         }
     }
