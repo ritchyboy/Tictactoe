@@ -63,7 +63,7 @@ namespace Tictactoe
                 hasWon = true;
                 return true;
             }
-            if (boards[6] == boards[8] && boards[6] == boards[8])
+            if (boards[6] == boards[7] && boards[6] == boards[8])
             {
                 Console.Clear();
                 hasWon = true;
@@ -125,9 +125,11 @@ namespace Tictactoe
         }
         public void updateBoard()
         {
-            checkBoardFill();
             Console.Clear();
             printBoard();
+            checkBoardFill();
+
+            
         }
         public void replay(string message)
         {
