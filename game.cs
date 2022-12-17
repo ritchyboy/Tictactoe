@@ -27,13 +27,12 @@ namespace Tictactoe
                 try
                 {
                     inputNumber = int.Parse(Console.ReadLine());
-                    tab.changeBoardValue(inputNumber, player1);
                 }
-                catch (Exception e)
-                {
+                catch(Exception e)
+                { 
                     Console.WriteLine(e.Message);
-
                 }
+                tab.changeBoardValue(inputNumber, player1);
                 if(tab.checkWinner())
                 {
                     Console.Clear();
@@ -46,7 +45,6 @@ namespace Tictactoe
                 try
                 {
                     inputNumber = int.Parse(Console.ReadLine());
-                    tab.changeBoardValue(inputNumber, player2);
 
                 }
                 catch (Exception e)
@@ -54,6 +52,7 @@ namespace Tictactoe
                     Console.WriteLine(e.Message);
 
                 }
+                tab.changeBoardValue(inputNumber, player2);
                 if(tab.checkWinner())
                 {
                     Console.Clear();

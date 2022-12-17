@@ -89,12 +89,30 @@ namespace Tictactoe
         }
         public void changeBoardValue(int value, string player)
         {
-
+            while (value<0||value>8)
+            {
+                Console.WriteLine("Enter a value between 0 and 8");
+                try
+                {
+                 value = int.Parse(Console.ReadLine());
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            }
             while(boards[value] == "X" || boards[value] == "O")
             {
                 Console.WriteLine("A player has already played there");
                 Console.WriteLine("Enter a new value");
-                value = int.Parse(Console.ReadLine());
+                try
+                {
+                 value = int.Parse(Console.ReadLine());
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
             }
                 boards[value] = player;
         }
