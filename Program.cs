@@ -5,7 +5,7 @@
       
         static void Main(string[] args)
         {
-            game Game= new game();
+            game Game = new game();
         }
     }
 }
